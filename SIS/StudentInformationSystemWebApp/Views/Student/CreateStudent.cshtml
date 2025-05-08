@@ -1,0 +1,121 @@
+﻿@model StudentInformationSystemWebApp.Models.Student
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form asp-action="CreateStudent" method="post">
+                <h4 class="text-center mb-4">Student Form</h4>
+
+                <!-- First Name + Middle Name in one row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="firstName" class="control-label">First Name</label>
+                            <input asp-for="firstName" class="form-control" />
+                            <span asp-validation-for="firstName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="middleName" class="control-label">Middle Name</label>
+                            <input asp-for="middleName" class="form-control" />
+                            <span asp-validation-for="middleName" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Last Name and Name Extension -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="lastName" class="control-label">Last Name</label>
+                            <input asp-for="lastName" class="form-control" />
+                            <span asp-validation-for="lastName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="nameExtension" class="control-label">Suffix</label>
+                            <input asp-for="nameExtension" class="form-control" />
+                            <span asp-validation-for="nameExtension" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Gender and Date of Birth -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="gender" class="control-label">Gender</label>
+                            <select asp-for="gender" class="form-control">
+                                <option value="">-- Select Gender --</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                            <span asp-validation-for="gender" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="dateOfBirth" class="control-label">Date of Birth</label>
+                            <input asp-for="dateOfBirth" class="form-control" type="date" />
+                            <span asp-validation-for="dateOfBirth" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Department and Year Level -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="department" class="control-label">Department</label>
+                            <select asp-for="department" class="form-control">
+                                <option value="">-- Select Department --</option>
+                                <option>College of Computer Studies</option>
+                                <option>College of Hotel and Restaurant Management</option>
+                                <option>College of Nursing and Midwifery</option>
+                                <option>College of Medical Technology</option>
+                                <option>College of Radiologic Technology</option>
+                                <option>College of Physical Theraphy</option>
+                                <option>School of Business and Accountancy</option>
+                                <option>School of Pharmacy</option>
+                            </select>
+                            <span asp-validation-for="department" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="yearLevel" class="control-label">Year Level</label>
+                            <select asp-for="yearLevel" class="form-control">
+                                <option value="">-- Select Year Level --</option>
+                                <option>1st Year</option>
+                                <option>2nd Year</option>
+                                <option>3rd Year</option>
+                                <option>4th Year</option>
+                                <option>5th Year</option>
+                            </select>
+                            <span asp-validation-for="yearLevel" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <!-- Department and Year Level -->
+                    <div class="col-md-9">
+                        <div class="form-group">
+                         
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary px-5">Submit</button>
+                        </div>
+                    </div>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</div>
